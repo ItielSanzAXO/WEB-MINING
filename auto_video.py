@@ -8,7 +8,6 @@ options = webdriver.EdgeOptions()
 options.add_experimental_option("detach", True)
 driver = webdriver.Edge(options=options)
 driver.get("https://www.youtube.com")
-
 buscador = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='search_query']"))
 )
